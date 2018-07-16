@@ -1,10 +1,9 @@
 # Contents 
 1. [Introduction](README.md#Intro)
-2. [Input Sample Cleaning](README.md#cleaning)
-3. [Additional Subroutines](README.md#sub)
-4. [Solution Approach](README.md#solapp)
-5. [Unit Test ](README.md#unit-test )
-6. [Full Functionality Test ](README.md#FFT)
+2. [Additional Subroutines](README.md#sub)
+3. [Solution Approach](README.md#solapp)
+4. [Unit Test ](README.md#unit-test )
+5. [Full Functionality Test ](README.md#FFT)
 
 # Introduction 
 Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 0.5 million data entry. 
