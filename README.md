@@ -35,7 +35,7 @@ L109: top_drug_cost[] converts the costs in rounded $ to write the output top_co
 N_unit_test is another global variable that can be varied to pick a subset of the data from any part of the original input.
 
 ./insight_testsuite/tests/test1/output/top_cost_drug.txt is a unit test with /insight_testsuite/tests/test1/input/itcont.txt as input with the following parameters: 
-factor = 10
+factor = 10 \n
 NODE = int(round(500000/factor))
 N_unit_test = 10000
 N_start = int(round(50000/2)) 
