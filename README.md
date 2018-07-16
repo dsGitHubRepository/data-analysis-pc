@@ -16,7 +16,7 @@ index_list : For a given sub-set of data this subroutine returns the indices fro
 count_frequency : For a given number, it returns the number of times that number repeats in a given data set. 
 
 # Solution Approach 
-./src/pharmacy‑counting.py initially declares number of data entry (NODE) of the input sample data itcont.txt. The main subroutine used for analysis named pharmacy_counting collects all column such as id,prescriber_last_name,prescriber_first_name,drug_name,drug_cost of the txt data in data_c_dn_fn_ln_unit[] and cost_data_unit[] collects only the drug cost. L26 cleans up the entry if the entry splits more than 5 items since the header contain 5 unit. 
+./src/pharmacy‑counting.py initially declares number of data entry (NODE) of the input sample data itcont.txt. The main subroutine used for analysis named pharmacy_counting collects all column such as id, prescriber_last_name, prescriber_first_name, drug_name, drug_cost of the txt data in data_c_dn_fn_ln_unit[] and cost_data_unit[] collects only the drug cost. L26 cleans up the entry if the entry splits more than 5 items since the header contain 5 unit. 
 
 In step 2, data_c_dn_fn_ln_unit_v1[] was obtained from data_c_dn_fn_ln_unit[] since only last name and first name will be used to identify number of times a drug was prescribed to same individual. Sorted cost named as drug_cost[] where list items are float, has been used to identify indices ( L73: index[] ) to pick corresponding drug list ( L83: top_drugs_prescriber[] ).
 
