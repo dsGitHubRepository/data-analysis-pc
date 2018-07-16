@@ -7,7 +7,7 @@
 6. [Full Functionality Test ](README.md#FFT)
 
 # Introduction 
-Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items.
+Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 0.5 million data entry. 
 
 # Additional Subroutines
 I used two additional subroutines and they are following :
@@ -17,13 +17,17 @@ count_frequency : For a given number, it returns the number of times that number
 # Solution Approach 
 ./src/pharmacy‑counting-v3.py defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. NOD allows us to choose any percentile of the data say 50%, 10% or 1% of the input data for analysis. 
 
-N_unit_test is another global variable that we can vary to sort out number of top cost drugs that we want to generate for the output. N_unit_test pick a subset of the data for analysis and this subset can be chosen anywhere from the original set. It allows us to choose first N data entry, last N data entry or N data points anywhere from the selected data set; so that we can quickly analyze a subset of the data from any part of the original input data set. 
+N_unit_test is another global variable that we can vary to sort out number of top cost drugs to generate the output, top_cost_drug.txt. N_unit_test pick a subset of the data for analysis and this subset can be chosen anywhere from the original set. It allows us to choose N number of line from any portion of the sample data; i.e.; either the original sample or any smaller subunit of the sample data can be choosen for analysis.
 
-The main subroutine used for analysis named pharmacy_counting collects all column such as id,prescriber_last_name,prescriber_first_name,drug_name,drug_cost of the txt data in data_c_dn_fn_ln and cost_data collects only the drug cost. Here the header of each column has been deleted.  
+The main subroutine used for analysis named pharmacy_counting collects all column such as id,prescriber_last_name,prescriber_first_name,drug_name,drug_cost of the txt data in data_c_dn_fn_ln[] and cost_data[] collects only the drug cost. L30 cleans up the entry if the entry splits more than 5 since the header contain 5 unit. 
 
-In step 2, L46; a subset of the above data was choosen for analysis of various units of the original data set. 
+In step 2, L50 picks a smaller unit, N_unit_test; for sorting the drug cost in descending order.  
 
-In step 3, L  
+In step 3, data_c_dn_fn_ln_unit_v1[] was obtained from data_c_dn_fn_ln[] since only last name and first name will be used to identify number of times a drug was prescribed to same individual. Sorted cost named as drug_cost[] where the items are float has been used to identify indices ( L96: index[] ) to pick corresponding drug list ( L106: top_drugs_prescriber[] ).
+
+L115: num_prescriber_rep[] data contains number of times top drugs were prescribed to same individuals that uses subroutine count_frequency and uses data_c_dn_fn_ln_unit_v1[] ( unsorted list of drug and its precriber ) and top_drugs_prescriber[] ( sorted list of drug and its prescriber using indices of top drugs and its prescriber in descending order ) as input to the subroutine. 
+
+L120: top_drug_cost[] converts the costs in rounded $ to write the output top_cost_drug.txt
  
 # Unit Test 
 Since the input data set contains over 24 million records from which a list of all drugs be generated as per their cost in descending order along with the number of times the same drug was prescribed by unique individual identified with the same last and first name.   
