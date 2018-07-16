@@ -1,4 +1,4 @@
-# N_of_data_entry  = 200000 (NODE) # de_cc_data.txt entry
+# N_of_data_entry  = 20000 (NODE) # de_cc_data.txt entry
 NODE = int(round(20000))
 def index_list(list1,sorted_list):
     #print len(list1), len(sorted_list)
