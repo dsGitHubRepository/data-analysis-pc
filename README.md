@@ -33,5 +33,7 @@ Since the input data set contains over 24 million records from which a list of a
 
 # Full Functionality Test
 
+./output/itcont.txt has 20,000 data entry. If I run ./src/pharmacy‑counting-full-functionality.py, it takes roughly a minute on my pc, where ./output/top_cost_drug.txt contains top cost drug HARVONI, cost $ 1942090. On the other hand the lowest cost drug ZOLPIDEM TARTRATE, cost $10.    
+
 
 
