@@ -33,6 +33,13 @@ L109: top_drug_cost[] converts the costs in rounded $ to write the output top_co
 ./src/pharmacy‑counting-unit-test.py defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. N allows to choose any percentile of the data say 50%, 10% or 1% of the input that would be used for analysis L54. 
 
 N_unit_test is another global variable that can be varied to pick a subset of the data from any part of the original input.
+
+./insight_testsuite/tests/test1/output/top_cost_drug.txt is a unit test with /insight_testsuite/tests/test1/input/itcont.txt as input with the following parameters: 
+factor = 10
+NODE = int(round(500000/factor))
+N_unit_test = 10000
+N_start = int(round(50000/2)) 
+
   
 
  
