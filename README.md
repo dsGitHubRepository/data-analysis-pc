@@ -9,8 +9,10 @@
 Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 20,000 data entry. 
 
 # Additional Subroutines
-I used two additional subroutines and they are following :
+I used two additional subroutines:
+
 index_list : For a given sub-set of data this subroutine returns the indices from the original data set. 
+
 count_frequency : For a given number, it returns the number of times that number repeats in a given data set. 
 
 # Solution Approach 
