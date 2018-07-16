@@ -2,8 +2,9 @@
 1. [Introduction](README.md#Intro)
 2. [Additional Subroutines](README.md#sub)
 3. [Solution Approach](README.md#solapp)
-4. [Unit Test ](README.md#unit-test )
-5. [Full Functionality Test ](README.md#FFT)
+4. [Full Functionality Test ](README.md#FFT)
+5. [Unit Test ](README.md#unit-test )
+
 
 # Introduction 
 Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 20,000 data entry. 
@@ -23,19 +24,18 @@ In step 2, data_c_dn_fn_ln_unit_v1[] was obtained from data_c_dn_fn_ln_unit[] si
 L88: num_prescriber_rep[] data contains number of times top drugs were prescribed to same individuals that uses subroutine count_frequency and uses data_c_dn_fn_ln_unit_v1[] ( unsorted list of drug and its precriber ) and top_drugs_prescriber[] ( sorted list of drug and its prescriber using indices of top drugs and its prescriber in descending order ) as input to the subroutine. 
 
 L109: top_drug_cost[] converts the costs in rounded $ to write the output top_cost_drug.txt
- 
-# Unit Test 
-./src/pharmacy‑counting.py defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. NOD allows us to choose any percentile of the data say 50%, 10% or 1% of the input data for analysis. 
-
-N_unit_test is another global variable that we can vary to sort out number of top cost drugs to generate the output, top_cost_drug.txt. N_unit_test pick a subset of the data for analysis and this subset can be chosen anywhere from the original set. It allows us to choose N number of line from any portion of the sample data; i.e.; either the original sample or any smaller subunit of the sample data can be choosen for analysis.
-
-In step 2, L50 picks a smaller unit, N_unit_test; for sorting the drug cost in descending order.  
-
-Since the input data set contains over 24 million records from which a list of all drugs be generated as per their cost in descending order along with the number of times the same drug was prescribed by unique individual identified with the same last and first name.   
 
 # Full Functionality Test
 
-./output/itcont.txt has 20,000 data entry. If I run ./src/pharmacy‑counting-full-functionality.py, it takes roughly a minute on my pc, where ./output/top_cost_drug.txt contains top cost drug HARVONI, cost $ 1942090. On the other hand the lowest cost drug ZOLPIDEM TARTRATE, cost $10.    
+./output/itcont.txt has 20,000 data entry. If I run ./src/pharmacy‑counting-full-functionality.py, it takes roughly a minute on my pc, where ./output/top_cost_drug.txt contains top cost drug HARVONI, cost $ 1942090. On the other hand the lowest cost drug ZOLPIDEM TARTRATE, cost $10.   
+ 
+# Unit Test 
+./src/pharmacy‑counting-unit-test.py defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. N allows to choose any percentile of the data say 50%, 10% or 1% of the input that would be used for analysis L54. 
+
+N_unit_test is another global variable that can be varied to pick a subset of the data from any part of the original input.
+  
+
+ 
 
 
 
