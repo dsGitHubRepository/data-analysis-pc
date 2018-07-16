@@ -1,5 +1,5 @@
 # N_of_data_entry  = 20000 (NODE) # de_cc_data.txt entry
-NODE = int(round(20000))
+NODE = 20000
 def index_list(list1,sorted_list):
     #print len(list1), len(sorted_list)
     index = []
@@ -31,7 +31,7 @@ def pharmacy_counting():
     cost_data_unit.pop(0)
 
 
-    # step 3 :
+    # step 2 :
 
     cost = []
     data_c_dn_fn_ln_unit_v1 = []
