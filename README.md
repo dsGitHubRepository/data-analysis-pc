@@ -6,7 +6,7 @@
 5. [Full Functionality Test ](README.md#FFT)
 
 # Introduction 
-Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 0.5 million data entry. 
+Input data set contains information on prescription drug prescribed by healthcare providers. It contains id, prescriber last and first name, drug name and cost as comma separated items. ./output/itcont.txt is a smaller unit of original input sample data with 20,000 data entry. 
 
 # Additional Subroutines
 I used two additional subroutines and they are following :
