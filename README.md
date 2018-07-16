@@ -26,11 +26,13 @@ L88: num_prescriber_rep[] data contains number of times top drugs were prescribe
 L109: top_drug_cost[] converts the costs in rounded $ to write the output top_cost_drug.txt
 
 # Full Functionality Test
-
+code: ./src/pharmacy‑counting.py
 ./output/itcont.txt has 20,000 data entry. If I run ./src/pharmacy‑counting-full-functionality.py, it takes roughly a minute on my pc, where ./output/top_cost_drug.txt contains top cost drug HARVONI, cost $ 1942090. On the other hand the lowest cost drug ZOLPIDEM TARTRATE, cost $10.   
  
 # Unit Test 
-./src/pharmacy‑counting-unit-test.py defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. N allows to choose any percentile of the data say 50%, 10% or 1% of the input that would be used for analysis L54. 
+code: ./src/pharmacy‑counting-unit-test.py 
+
+defines some global variables for running the test since the original input file contains roughly 24 million data points. NODE (number of data entry) variable allows to choose a subset of the input data that would be used for analysis. N allows to choose any percentile of the data say 50%, 10% or 1% of the input that would be used for analysis L54. 
 
 N_unit_test is another global variable that can be varied to pick a subset of the data from any part of the original input.
 
