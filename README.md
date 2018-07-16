@@ -48,6 +48,9 @@ N_unit_test = 10000
 N_start = int(round(50000/2)) 
 
   
+code: ./src/pharmacy‑counting.py with input ./insight_testsuite/tests/your‑own‑test_1/input/your_own_input_for_itcont.txt returns output 
+./insight_testsuite/tests/your‑own‑test_1/output/top_cost_drug.txt. Here the input has only 25 lines including the header.
+
 
  
 
