@@ -27,6 +27,7 @@ L109: top_drug_cost[] converts the costs in rounded $ to write the output top_co
 
 # Full Functionality Test
 code: ./src/pharmacy‑counting.py
+
 ./output/itcont.txt has 20,000 data entry. If I run ./src/pharmacy‑counting-full-functionality.py, it takes roughly a minute on my pc, where ./output/top_cost_drug.txt contains top cost drug HARVONI, cost $ 1942090. On the other hand the lowest cost drug ZOLPIDEM TARTRATE, cost $10.   
  
 # Unit Test 
